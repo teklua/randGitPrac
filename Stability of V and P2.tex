@@ -1,0 +1,51 @@
+\documentclass[12]{article}
+\usepackage[margin = 1in]{geometry}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{C:\Users\Abe\Documents\CEIRA Research\Large B approx}
+\begin{document}
+
+\title{Stability of Critical Points}
+\author{Abraham Teklu}
+\date{}
+\maketitle
+
+$$\frac{dP}{dt} = P\left(1-P-\frac{AV}{P+C}\right) = f$$ 
+$$\frac{dV}{dt} = BV(1-\frac{V}{P}) = g$$
+
+\begin{Large}
+$$J = \begin{bmatrix}
+\frac{\partial f}{\partial P} & \frac{\partial f}{\partial V}\\
+\frac{\partial g}{\partial P} & \frac{\partial g}{\partial V}
+\end{bmatrix}
+$$
+\end{Large}
+
+\begin{Large}
+$$J = \begin{bmatrix}
+1-2P-\frac{AV}{P+C} + \frac{APV}{(P+C)^2} & \frac{-AP}{P+C}\\
+\frac{BV^2}{P^2} & B - \frac{2BV}{P}
+\end{bmatrix}
+$$
+\end{Large}
+For critical the point $(P,V) = (1,0)$ the Jacobian matrix is the following:
+\begin{Large}
+$$J = \begin{bmatrix}
+-1 & \frac{-A}{1+C}\\
+0 & B
+\end{bmatrix}
+$$
+\end{Large}
+The eigenvalues for this matrix can be calculated as follows:
+\begin{Large}
+$$0 = \begin{vmatrix}
+-1-\lambda & \frac{-A}{1+C}\\
+0 & B-\lambda
+\end{vmatrix}
+$$
+
+$$0 = (-1-\lambda)(B-\lambda)$$
+\end{Large}
+This says the eigenvalues are $\lambda = -1$ and $\lambda = B$. For the critical point $(P,V) = (1,0)$ to not be a saddle $B$ would need to be negative.
+\end{document}

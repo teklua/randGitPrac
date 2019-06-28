@@ -1,0 +1,30 @@
+\documentclass[12]{article}
+\usepackage[margin = 1in]{geometry}
+\usepackage{amsmath}
+\usepackage{listings}
+\begin{document}
+
+\title{Nondimensionalization}
+\author{Abraham Teklu}
+\date{}
+\maketitle
+When we start with the equation for the the rate of change of a population:
+$$\frac{dP}{dt} = PN(P)$$
+Where $N(P)$ is a function of population, and $P$ is the population. If we say $N(P)$ is the following:
+$$N(P) = \pm a$$
+Where a is constant and the sign depends on whether the population is growing or shrinking. 
+\\
+But this isn't accurate. The larger the population the more competition which will cause the competition; this can be represented more accurately with the following equation:
+$$\frac{dP}{dt} = P(a-a'P)$$ 
+Where $a$ and $a'$ are corresponding units to make the entire equation population per time. To nondimensionalize this equation we can turn it into the following form:
+$$\frac{d\bar{P}}{d\bar{t}} = \bar{P}(1-\bar{P})$$ 
+Where $\bar{P} = \frac{P}{P_{ref}}$ and $\bar{t} = \frac{t}{t_{ref}}$. Where $P_{ref}$ and $t_{ref}$ are reference times and populations. We can do this like the following:
+$$d\bar{P} = \frac{dP}{P_{ref}}~~~~ d\bar{t} = \frac{dt}{t_{ref}} \rightarrow \bar{dP}P_{ref} = dP ~~~~ \bar{t}t_{ref} = t$$
+If we plug this in to dimensional equation:
+$$\frac{d\bar{P}}{d\bar{t}} \frac{P_{ref}}{t_{ref}} = \bar{P}P_{ref}(a-a'\bar{P}P_{ref})$$
+$$\frac{d\bar{P}}{d\bar{t}} = \bar{P}t_{ref}a-a'\bar{P}^2P_{ref}t_{ref}$$
+So we can conclude:
+$$t_{ref}a = 1 ~~~~~ P_{ref}t_{ref}a' = 1$$
+and then
+$$t_{ref} = \frac{1}{a} ~~~~~~~ P_{ref} = \frac{a}{a'}$$
+\end{document}
